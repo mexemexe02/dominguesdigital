@@ -24,11 +24,8 @@ Any push to `main` publishes via GitHub Pages. No CI needed.
 
 ## Outstanding
 
-- [ ] **Phone number.** Deliberately absent. A dedicated business line is needed
-      (cannot reuse the Kumon centre number — already bound to that Google
-      profile). Once it exists, add it in three places: `index.html` contact
-      section, `contact.html` details list, and `telephone` in both JSON-LD
-      blocks. The site and the Google profile should gain the number together.
+- [x] **Phone number.** (416) 918-0473 — live on both pages and in both
+      JSON-LD blocks as +1-416-918-0473.
 - [ ] **Email forwarding** for `hello@dominguesdigital.com` — set up at the
       registrar or via Cloudflare Email Routing (free) before announcing the site.
 - [ ] Consider adding real client work/testimonials once there are some.
