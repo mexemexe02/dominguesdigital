@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="a10dee-title">
+  <title id="a10dee-title">A10dee</title>
+  <rect width="64" height="64" rx="14" fill="#14212b"/>
+  <path d="M18 52V20c0-3.3 2.7-6 6-6h16c3.3 0 6 2.7 6 6v32" stroke="#0f766e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M24 52V28c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v24" fill="#0f766e"/>
+  <circle cx="42" cy="42" r="11" fill="#d7f0ed"/>
+  <path d="M36.5 42.2l3.2 3.2 7.2-7.6" stroke="#0b5c56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,46 @@
+/* Variant A — "dark technical" · warm-dark, grotesk display, cool accent
+ * axes: paper=dark (lightness < 30%) / display=grotesk-sans / accent=cool (200-300)
+ */
+
+:root {
+  /* ---- colour (OKLCH) ---- */
+  --paper:        oklch(24% 0.012 260);
+  --paper-2:      oklch(28% 0.013 260);
+  --paper-3:      oklch(32% 0.014 260);
+  --ink:          oklch(94% 0.006 240);
+  --ink-2:        oklch(72% 0.012 250);
+  --ink-3:        oklch(58% 0.012 250);
+  --accent:       oklch(76% 0.11 235);
+  --accent-strong: oklch(82% 0.12 235);
+  --rule:         oklch(46% 0.014 260);
+  --rule-2:       oklch(54% 0.015 260);
+  --focus-ring:   oklch(80% 0.13 235);
+
+  /* ---- type ---- */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  --text-hero:    clamp(2.4rem, 6.5vw, 4.2rem);
+  --text-h2:      clamp(1.4rem, 3vw, 2rem);
+  --text-lg:      1.125rem;
+  --text-base:    1rem;
+  --text-sm:      0.875rem;
+  --text-xs:      0.8rem;
+
+  --leading-tight: 1.05;
+  --leading-snug:  1.35;
+  --leading-body:  1.6;
+  --measure:       62ch;
+
+  /* ---- space (4pt) ---- */
+  --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+  --sp-6: 1.5rem;  --sp-8: 2rem;   --sp-12: 3rem;   --sp-16: 4rem;
+  --sp-24: 6rem;
+
+  /* ---- easing / duration ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:  cubic-bezier(0.55, 0, 1, 0.45);
+  --dur-fast: 130ms;
+  --dur-mid:  220ms;
+}

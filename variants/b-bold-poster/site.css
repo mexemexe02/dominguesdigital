@@ -1,0 +1,356 @@
+/* Variant B — "bold poster editorial" · site.css */
+
+@import url("tokens.css");
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { overflow-x: clip; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--sp-4);
+}
+@media (min-width: 48rem) { .wrap { padding-inline: var(--sp-8); } }
+
+/* ---------- masthead ---------- */
+
+.masthead {
+  border-bottom: 3px solid var(--ink);
+}
+
+.masthead__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-2) var(--sp-6);
+  padding-block: var(--sp-4);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wordmark:hover { color: var(--accent-strong); }
+
+.masthead__meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- hero: the manifesto ---------- */
+
+.hero {
+  padding-block: var(--sp-24) var(--sp-16);
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-hero);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.015em;
+  margin: 0 0 var(--sp-8);
+  max-width: 14ch;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.hero h1 .accent-word {
+  color: var(--accent);
+  display: inline-block;
+}
+
+.hero p {
+  max-width: var(--measure);
+  color: var(--ink-2);
+  margin: 0 0 var(--sp-4);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+}
+
+.hero .pull {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-strong);
+  margin: var(--sp-8) 0 0;
+}
+
+.hero .actions { margin-top: var(--sp-8); }
+
+/* deliberate grid break: the pull-line hangs into the right margin on wide screens */
+@media (min-width: 64rem) {
+  .hero .pull {
+    position: absolute;
+    right: var(--sp-8);
+    bottom: var(--sp-12);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 0;
+  }
+}
+
+/* ---------- sections ---------- */
+
+section { padding-block: var(--sp-16); border-bottom: 1px solid var(--rule); }
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--sp-8);
+  max-width: 22ch;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  letter-spacing: 0.005em;
+  margin: 0 0 var(--sp-2);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+p { max-width: var(--measure); }
+
+/* ---------- services: asymmetric ledger ---------- */
+
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services li {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: minmax(0, 1fr);
+  padding-block: var(--sp-6);
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 48rem) {
+  .services li {
+    grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: var(--sp-6);
+    align-items: start;
+  }
+}
+
+.services .idx {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent-strong);
+  padding-top: 0.3em;
+}
+
+.services p { margin: 0; color: var(--ink-2); }
+
+/* ---------- products ---------- */
+
+.products {
+  display: grid;
+  gap: var(--sp-6);
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 48rem) {
+  .products { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); }
+}
+
+.product {
+  border: 2px solid var(--ink);
+  padding: var(--sp-8);
+  background: var(--paper);
+  transition: background var(--dur-mid) var(--ease-out), transform var(--dur-mid) var(--ease-out);
+}
+
+.product--wide {
+  background: var(--ink);
+  color: var(--paper);
+}
+.product--wide p { color: oklch(84% 0.015 75); }
+.product--wide a { color: oklch(88% 0.08 45); }
+.product--wide a:hover { color: var(--paper); }
+
+.product:hover { transform: translate(-2px, -2px); }
+
+.product h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--sp-4);
+}
+
+.product p { margin: 0 0 var(--sp-6); color: inherit; max-width: none; }
+
+.product .tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: var(--sp-2);
+  color: var(--accent-strong);
+}
+.product--wide .tag { color: oklch(88% 0.08 45); }
+
+/* ---------- process ---------- */
+
+.process { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+
+.process li {
+  counter-increment: step;
+  padding-block: var(--sp-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.process li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent-strong);
+  margin-right: var(--sp-4);
+}
+
+.process p { margin: 0; color: var(--ink-2); display: inline; }
+
+/* ---------- contact ---------- */
+
+.contact-block {
+  background: var(--paper-2);
+  border: 1px solid var(--rule-2);
+  padding: var(--sp-8);
+}
+
+.contact-lines {
+  list-style: none;
+  margin: 0 0 var(--sp-6);
+  padding: 0;
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.contact-lines a {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  letter-spacing: -0.01em;
+  line-height: var(--leading-tight);
+}
+
+.label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--sp-1);
+}
+
+/* ---------- links ---------- */
+
+a { color: var(--accent-strong); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--ink); }
+
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* ---------- buttons ---------- */
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-base);
+  line-height: 1.2;
+  white-space: nowrap;
+  padding: var(--sp-3) var(--sp-6);
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+}
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: oklch(97% 0.01 75);
+}
+.btn--primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+
+/* ---------- footer ---------- */
+
+.foot { padding-block: var(--sp-16) var(--sp-24); }
+
+.foot__statement {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-h2);
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--sp-12);
+  max-width: 22ch;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.foot__statement .accent-word { color: var(--accent); }
+
+.legal {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--ink-3);
+  border-top: 1px solid var(--ink);
+  padding-top: var(--sp-6);
+  display: grid;
+  gap: var(--sp-1);
+  max-width: none;
+}
+.legal strong { color: var(--ink-2); font-weight: 600; }
+.legal a { color: var(--ink-2); }
+.legal a:hover { color: var(--accent-strong); }
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
