@@ -1,5 +1,22 @@
 # Development log
 
+## 2026-09-02 — Full site audit (infra + code + visual)
+
+**Infra checked, all healthy:** every page 200; www→apex and http→https 301s; Cloudflare proxy on, SSL Full, Always-HTTPS on; sitemap + robots served; email routing live (hello/contact/support → Gmail). GitHub's own "Enforce HTTPS" cannot be enabled while Cloudflare proxies the domain (GitHub can't issue a cert it never sees) — this is expected; Cloudflare enforces HTTPS at the edge instead.
+
+**Bugs fixed:**
+- Sideways scroll at 320px on Home (`.visual__glow` 22rem wide) and Contact (`1fr` grid tracks growing to fit the email address). Fixed with `min(22rem, 88vw)` and `minmax(0, 1fr)`.
+- No `404.html` — GitHub Pages served a plain default. Added a branded one with absolute asset paths.
+- No `og:image` on any page, so shared links had no preview card. Generated `assets/og-image.png` (1200×630) and added OG/Twitter tags to all pages.
+- Founder photo was 2000×1500 / 562 KB for a ~500px slot. Resized to 1200×900 / 279 KB.
+- Montserrat font was requested but only referenced inside an `<img>` SVG (unreachable). Removed.
+- Home nav "Contact" pointed at the CTA anchor while inner pages pointed at `contact.html`. Unified.
+- Mock dashboard showed an invented "↑ 12% this week" stat. Replaced with neutral labels and marked "sample".
+
+**Improvements:** "On-site setup" (the paid service) added to nav; phone number now a tap-to-call link in the header on every page; skip-to-content link; hero animation no longer uses `filter: blur`; sitemap `lastmod` updated.
+
+**Audit method:** Playwright driving Edge at 320/375/390/414/768/1024. Note: raw headless Edge `--window-size` clamps at 510px wide, so its "mobile" screenshots are misleading — use Playwright viewports.
+
 ## 2026-09-02 — Custom mark + ship editorial restore
 
 **Ask:** Decide whether to use `V:/repos/react-bits` on this site. Create a real logo. Commit and push so the restored site is live.
