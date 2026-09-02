@@ -95,7 +95,8 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--color-coral); out
 section[id] { scroll-margin-top: 4.5rem; }
 @media (max-width: 48rem) { section[id] { scroll-margin-top: 9.5rem; } }
 .work .section__intro { margin-bottom: 3rem; }
-.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+/* auto-fit: two or three cards both fill the row without an empty slot. */
+.work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1.25rem; }
 .work-card { display: flex; flex-direction: column; border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: #fff; overflow: hidden; transition: transform var(--dur-mid) var(--ease-out), box-shadow var(--dur-mid) var(--ease-out); }
 .work-card:hover { transform: translateY(-4px); box-shadow: 0 1.5rem 3rem #14203318; }
 .work-card__shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--color-rule); background: var(--color-paper-2, #eef0ec); }
@@ -109,8 +110,7 @@ section[id] { scroll-margin-top: 4.5rem; }
 /* Mono badge so "concept, not live" is read as a fact, not a tagline. */
 .concept-badge { align-self: flex-start; padding: .3rem .6rem; border-radius: 999px; background: #fff1ec; color: #a8452e; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
 .work__note { max-width: 62ch; margin: 2rem 0 0; color: var(--color-ink-2); font-size: .82rem; }
-@media (max-width: 64rem) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 40rem) { .work-grid { grid-template-columns: minmax(0, 1fr); } .work { padding-block: 3.5rem 4rem; } }
+@media (max-width: 40rem) { .work { padding-block: 3.5rem 4rem; } }
 
 /* minmax(0,1fr) instead of 1fr: a plain 1fr track grows to fit long words
  * (e.g. the email address) and pushes the page wider than a 320px phone. */

@@ -15,6 +15,14 @@
 
 **Not yet done (approval UI failed):** publish `dd-demos` to GitHub, enable Pages, add Cloudflare CNAME `demo` → `mexemexe02.github.io` (proxied). Until then the Preview links on the two static cards 404. Main-site commit is local only for that reason.
 
+**Kangen card pulled (2026-09-02, later):** a web check found no "Kangen Wellness Center" in Barrie — the brand has locations in London, Hamilton, Toronto, Markham, Mississauga only. The section promises real businesses, so the card is out until Humberto confirms who the site is for. Demo folder still exists in `dd-demos/kangen/` but is unlinked.
+
+**Owner contacts found (public):**
+- Pro Fleet Care Simcoe County — Jan Borkowski, `simcoecounty@profleetcare.com`, 705-627-7941 (profleetcare.com/service-providers/simcoe-county)
+- Total Concept Kitchens — `totalconceptkitchens@gmail.com`, (705) 309-4443, 438 Dunlop St W, Barrie (from the project's business-profile-source.json)
+
+**Emails not sent:** this environment has no mail-sending tool (Cloudflare Email Routing only forwards inbound). Drafts below are ready to paste into Gmail from hdominguesdigital@gmail.com.
+
 **Permission email (send before publishing):**
 > Subject: I built a website for [Business] — can I show it?
 >
