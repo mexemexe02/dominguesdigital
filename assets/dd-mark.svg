@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="dd-mark-title">
+  <title id="dd-mark-title">Domingues Digital</title>
+  <!--
+    Custom mark, not a font letter in a box.
+    The D is drawn as a stem + open bowl. The inner cobalt arc
+    is the "digital" part: a signal sitting inside the letter.
+    Reads at favicon size. Uses the site ink and accent colours.
+  -->
+  <rect width="64" height="64" rx="16" fill="#111b2b"/>
+  <!-- Stem of the D. Rounded so it stays soft at small sizes. -->
+  <rect x="16" y="14" width="7.5" height="36" rx="3.75" fill="#f7f8f5"/>
+  <!-- Outer bowl. Stops short of a full D so the letter feels built, not typed. -->
+  <path d="M23.5 14.6c15.2 0 23.2 6.6 23.2 17.4s-8 17.4-23.2 17.4"
+        stroke="#f7f8f5" stroke-width="7.5" stroke-linecap="round"/>
+  <!-- Inner signal arc. This is the unique bit. -->
+  <path d="M23.5 23.2c8.6 0 13.2 3.2 13.2 8.8s-4.6 8.8-13.2 8.8"
+        stroke="#3158d8" stroke-width="4" stroke-linecap="round"/>
+</svg>
