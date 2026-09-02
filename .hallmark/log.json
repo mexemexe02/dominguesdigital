@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-08-27",
+    "macrostructure": "Workbench (Long Document)",
+    "theme": "custom",
+    "theme_axes": "light / grotesk-sans / cool",
+    "vibe": "technical on warm paper",
+    "nav": "sticky masthead",
+    "footer": "statement",
+    "genre": "editorial",
+    "enrichment": "none (typography only)",
+    "brief": "Domingues Digital — warm-workbench, GBP-verification-grade NAP, Space Grotesk"
+  },
+  {
+    "date": "2026-08-27",
     "macrostructure": "Long Document",
     "theme": "custom",
     "theme_axes": "light / roman-serif / warm",
