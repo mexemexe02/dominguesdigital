@@ -13,7 +13,7 @@
 - `section[id] { scroll-margin-top }` so anchors clear the sticky header.
 - New repo folder `V:\Cursor_Projects\dd-demos` — copies of the two static sites, every page patched with `noindex,nofollow` and a fixed bottom banner ("Concept site by Domingues Digital. Not yet live. Is this your business? Claim it."). `robots.txt` disallows all. `CNAME` = `demo.dominguesdigital.com`.
 
-**Not yet done (approval UI failed):** publish `dd-demos` to GitHub, enable Pages, add Cloudflare CNAME `demo` → `mexemexe02.github.io` (proxied). Until then the Preview links on the two static cards 404. Main-site commit is local only for that reason.
+**Published 2026-09-02 19:05 (user approved):** `github.com/mexemexe02/dd-demos` created, Pages enabled with CNAME, Cloudflare CNAME `demo` → `mexemexe02.github.io` (proxied). Verified: `demo.dominguesdigital.com/profleetcare/` 200 with noindex + banner, CSS/images load; `dominguesdigital.com/products.html#work` live with two cards. Main site pushed.
 
 **Kangen card pulled (2026-09-02, later):** a web check found no "Kangen Wellness Center" in Barrie — the brand has locations in London, Hamilton, Toronto, Markham, Mississauga only. The section promises real businesses, so the card is out until Humberto confirms who the site is for. Demo folder still exists in `dd-demos/kangen/` but is unlinked.
 
