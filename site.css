@@ -88,6 +88,30 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--color-coral); out
 
 @media (max-width: 60rem) { .hero { grid-template-columns: 1fr; padding-block: 4rem; }.hero__visual { max-width: 40rem; margin: 0 auto; width: 100%; }.section__intro { grid-template-columns: .6fr 1fr; }.section__intro > p:last-child { grid-column: 2; }.story { gap: 3rem; } }
 @media (max-width: 48rem) { .wrap { padding-inline: 1.25rem; }.masthead__inner { flex-wrap: wrap; }.masthead__meta { order: 3; width: 100%; }.nav { gap: 1rem; }.hero { min-height: 0; padding-block: 4rem 3rem; }.hero__note { margin-top: 2.5rem; }.hero__visual { min-height: 25rem; }.float-card--top { right: -1%; }.float-card--bottom { left: -1%; }.dashboard { transform: rotate(1deg); }.proof-band__inner { flex-wrap: wrap; gap: .7rem 1rem; }.proof-band p { width: 100%; order: 2; }.proof-line, .proof-detail { display: none; }.section { padding-block: 5rem; }.section__intro, .products, .service-grid, .story, .process, .contact-hero, .contact-grid, .support-section, .service-hero, .service-process, .service-area-band { grid-template-columns: minmax(0, 1fr); }.section__intro > p:last-child { grid-column: auto; }.products { gap: .75rem; }.product { min-height: 25rem; }.service-grid { gap: 0; }.service-grid article, .service-grid article:not(:first-child) { min-height: 0; padding: 1.5rem 0; border-right: 0; border-bottom: 1px solid var(--color-rule); }.service-grid article:last-child { border-bottom: 0; }.service-grid h3 { margin-top: 1.5rem; }.story { padding-block: 2rem 5rem; }.story__image { max-width: 25rem; margin-inline: auto; }.image-caption { right: -.5rem; }.process { gap: 1.5rem; }.cta { align-items: start; flex-direction: column; margin-bottom: 3rem; padding: 2rem 1.5rem; border-radius: var(--radius-md); }.foot__top, .legal { flex-direction: column; }.foot__top p { text-align: left; }.legal { gap: .5rem; }.contact-hero { padding-block: 4rem; }.contact-orbit { width: 15rem; }.contact-grid, .support-section { padding-bottom: 5rem; }.contact-panel, .contact-aside { padding: 1.5rem; }.support-section { gap: 2.5rem; }.service-hero { gap: 2.5rem; padding-block: 4rem; }.service-hero__visual { width: 15rem; }.service-detail { padding-block: 5rem; }.service-deliverables { grid-template-columns: 1fr; }.service-deliverables article, .service-deliverables article:nth-child(even) { min-height: 0; padding: 1.5rem 0; border-right: 0; border-bottom: 1px solid var(--color-rule); }.service-deliverables article:nth-child(n + 3) { border-top: 0; }.service-deliverables article:last-child { border-bottom: 0; }.service-process { gap: 2.5rem; padding-block: 4rem 5rem; }.service-area-band { gap: 1.5rem; margin-bottom: 3rem; padding: 2rem 1.5rem; } }
+/* Concept work cards on products.html. Screenshot on top, honest badge, two actions. */
+.work { padding-block: 5rem 6rem; border-top: 1px solid var(--color-rule); }
+/* Anchor links (#work, #services, #contact) land below the sticky header, not under it.
+ * Header is three rows tall on phones, so the offset grows there. */
+section[id] { scroll-margin-top: 4.5rem; }
+@media (max-width: 48rem) { section[id] { scroll-margin-top: 9.5rem; } }
+.work .section__intro { margin-bottom: 3rem; }
+.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.work-card { display: flex; flex-direction: column; border: 1px solid var(--color-rule); border-radius: var(--radius-md); background: #fff; overflow: hidden; transition: transform var(--dur-mid) var(--ease-out), box-shadow var(--dur-mid) var(--ease-out); }
+.work-card:hover { transform: translateY(-4px); box-shadow: 0 1.5rem 3rem #14203318; }
+.work-card__shot { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--color-rule); background: var(--color-paper-2, #eef0ec); }
+.work-card__shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.work-card__body { display: flex; flex-direction: column; flex: 1; gap: .55rem; padding: 1.25rem 1.35rem 1.4rem; }
+.work-card h3 { margin: 0; font-size: 1.15rem; letter-spacing: -.02em; }
+.work-card p { margin: 0; color: var(--color-ink-2); font-size: .92rem; }
+.work-card__links { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; margin-top: auto; padding-top: .9rem; }
+.work-card__claim { color: var(--color-accent); font-size: .82rem; font-weight: 700; text-decoration: none; }
+.work-card__claim:hover { text-decoration: underline; }
+/* Mono badge so "concept, not live" is read as a fact, not a tagline. */
+.concept-badge { align-self: flex-start; padding: .3rem .6rem; border-radius: 999px; background: #fff1ec; color: #a8452e; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
+.work__note { max-width: 62ch; margin: 2rem 0 0; color: var(--color-ink-2); font-size: .82rem; }
+@media (max-width: 64rem) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .work-grid { grid-template-columns: minmax(0, 1fr); } .work { padding-block: 3.5rem 4rem; } }
+
 /* minmax(0,1fr) instead of 1fr: a plain 1fr track grows to fit long words
  * (e.g. the email address) and pushes the page wider than a 320px phone. */
 @media (max-width: 48rem) { .portfolio-hero, .portfolio-products, .portfolio-development, .portfolio-service { grid-template-columns: minmax(0, 1fr); }.portfolio-hero { gap: 2.5rem; padding-block: 4rem; }.portfolio-products { gap: .75rem; padding-block: 4rem 5rem; }.portfolio-product { min-height: 24rem; padding: 1.5rem; }.portfolio-product__logo { margin-top: 3rem; }.portfolio-product__a10dee-brand { margin-top: 2.5rem; }.portfolio-product__link { bottom: 1.5rem; left: 1.5rem; }.portfolio-development { gap: 2rem; padding-block: 3rem; }.portfolio-service { gap: 1.5rem; padding-block: 4rem 5rem; } }

@@ -1,5 +1,25 @@
 # Development log
 
+## 2026-09-02 — Concept work section + demo subdomain
+
+**Ask:** Show the spec websites we built for local businesses, honestly, and use them as a lead magnet.
+
+**What exists:** Pro Fleet Care (static, 7 pages), Kangen Wellness Center Barrie (static, 8 pages), Total Concept Kitchens (Next.js app with portal + API — needs a server, so screenshot only). NannyB has no site built, only planning docs. Guard Your Space and the Kumon platform were left out (product site / internal).
+
+**Built:**
+- `products.html#work` — "Concept work" section, three cards, each with screenshot, `Concept · not yet live` badge, Preview link and "Is this your business? Claim it" mailto. Footnote says names/logos belong to owners and sites come down on request.
+- `assets/work/*.jpg` — 1280×800 screenshots, ~75 KB each.
+- Home "Websites" service card now links to the section.
+- `section[id] { scroll-margin-top }` so anchors clear the sticky header.
+- New repo folder `V:\Cursor_Projects\dd-demos` — copies of the two static sites, every page patched with `noindex,nofollow` and a fixed bottom banner ("Concept site by Domingues Digital. Not yet live. Is this your business? Claim it."). `robots.txt` disallows all. `CNAME` = `demo.dominguesdigital.com`.
+
+**Not yet done (approval UI failed):** publish `dd-demos` to GitHub, enable Pages, add Cloudflare CNAME `demo` → `mexemexe02.github.io` (proxied). Until then the Preview links on the two static cards 404. Main-site commit is local only for that reason.
+
+**Permission email (send before publishing):**
+> Subject: I built a website for [Business] — can I show it?
+>
+> Hi [Name], I'm Humberto, I run a Kumon centre in Barrie and a small studio called Domingues Digital. I built a full website concept for [Business] on my own time because I thought you deserved a better one than most local trades have. No charge to look: [demo link]. Two asks: may I show it in my portfolio as a concept, and if you like it, would you want it live on your own domain? If not, say the word and it comes down. — Humberto, (416) 918-0473
+
 ## 2026-09-02 — Full site audit (infra + code + visual)
 
 **Infra checked, all healthy:** every page 200; www→apex and http→https 301s; Cloudflare proxy on, SSL Full, Always-HTTPS on; sitemap + robots served; email routing live (hello/contact/support → Gmail). GitHub's own "Enforce HTTPS" cannot be enabled while Cloudflare proxies the domain (GitHub can't issue a cert it never sees) — this is expected; Cloudflare enforces HTTPS at the edge instead.
