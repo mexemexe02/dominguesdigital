@@ -92,9 +92,7 @@
   <section class="cta wrap"><div><p class="eyebrow">Ready to get it working?</p><h2>Request a quote for<br><em>your setup.</em></h2></div><a class="btn btn--light" href="mailto:hello@dominguesdigital.com?subject=Request%20a%20quote%20-%20On-Site%20Digital%20Setup">Request a quote <span>↗</span></a></section>
 </main>
 
-<footer class="foot wrap"><div class="foot__top"><a class="wordmark" href="/"><img class="wordmark__logo" src="assets/dd-mark.svg" alt="" width="32" height="32"> Domingues<span>Digital</span></a><p>Thoughtful digital systems<br>for real-world businesses.</p></div><div class="legal"><p><strong>2120670 Ontario Inc. o/a Domingues Digital</strong> · Barrie, Ontario, Canada</p><p><a href="tel:+14169180473">(416) 918-0473</a> · <a href="mailto:hello@dominguesdigital.com">hello@dominguesdigital.com</a> · © 2026</p></div><div style="margin-top:14px"><div google-add-preferred-source-btn data-theme="light"></div></div></footer>
+<footer class="foot wrap"><div class="foot__top"><a class="wordmark" href="/"><img class="wordmark__logo" src="assets/dd-mark.svg" alt="" width="32" height="32"> Domingues<span>Digital</span></a><p>Thoughtful digital systems<br>for real-world businesses.</p></div><div class="legal"><p><strong>2120670 Ontario Inc. o/a Domingues Digital</strong> · Barrie, Ontario, Canada</p><p><a href="tel:+14169180473">(416) 918-0473</a> · <a href="mailto:hello@dominguesdigital.com">hello@dominguesdigital.com</a> · © 2026</p></div></footer>
 
-<!-- Google: "Add to Preferred Sources" official embed (developers.google.com/search/docs/appearance/preferred-sources) -->
-<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </body>
 </html>
